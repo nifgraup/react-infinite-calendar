@@ -8,7 +8,7 @@ export default class Month extends Component {
 		return (!nextProps.isScrolling && !this.props.isScrolling);
 	}
 	renderRows() {
-		let {disabledDates, disabledDays, displayDate, locale, maxDate, minDate, onDaySelect, rowHeight, rows, selectedDate, today, theme} = this.props;
+		let {disabledDates, disabledDays, displayDate, locale, maxDate, minDate, onDaySelect, rowHeight, rows, selectedDate, today, theme, renderMonthDay} = this.props;
 		let currentYear = today.date.year();
 		let monthShort = displayDate.format('MMM');
 		let monthRows = [];
@@ -16,6 +16,7 @@ export default class Month extends Component {
 		let isDisabled = false;
 		let isSelected = false;
 		let isToday = false;
+    let isSameMonth = false;
 		let row, date, days;
 
 		// Oh the things we do in the name of performance...
@@ -26,8 +27,9 @@ export default class Month extends Component {
 			for (let k = 0, len = row.length; k < len; k++) {
 				date = row[k];
 				day++;
-
 				isSelected = (selectedDate && date.yyyymmdd == selectedDate.yyyymmdd);
+        isSameMonth = (selectedDate && date.yyyymmdd.substring(0, 6) ==
+          selectedDate.yyyymmdd.substring(0, 5));
 				isToday = (today && date.yyyymmdd == today.yyyymmdd);
 				isDisabled = (
 					minDate && date.yyyymmdd < minDate.yyyymmdd ||
@@ -45,7 +47,9 @@ export default class Month extends Component {
 						handleDayClick={onDaySelect}
 						isDisabled={isDisabled}
 						isToday={isToday}
+						isSameMonth={isSameMonth}
 						isSelected={isSelected}
+            renderMonthDay={renderMonthDay}
 						locale={locale}
 						monthShort={monthShort}
 						theme={theme}
