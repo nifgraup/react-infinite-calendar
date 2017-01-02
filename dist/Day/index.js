@@ -67,19 +67,19 @@ function Day(_ref) {
     },
     _react2.default.createElement(
       'span',
-      null,
+      { className: style.day },
       day
     ),
     typeof renderMonthDay == 'function' && renderMonthDay(mmt),
-    day === 1 && currentYear !== year && _react2.default.createElement(
-      'span',
-      { className: style.year },
-      year
-    ),
     day === 1 && _react2.default.createElement(
       'span',
       { className: style.month },
-      monthShort
+      monthShort,
+      day === 1 && currentYear !== year && _react2.default.createElement(
+        'span',
+        { className: style.year },
+        year
+      )
     )
   );
 }

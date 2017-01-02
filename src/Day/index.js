@@ -32,13 +32,17 @@ export default function Day({currentYear, date, day, handleDayClick, isDisabled,
         ? handleEvent(onDayMouseEnter, mmt)
         : null}
       >
-      <span>{day}</span>
+      <span className={style.day}>{day}</span>
       {typeof renderMonthDay == 'function' && renderMonthDay(mmt)}
 
-      {(day === 1 && currentYear !== year) &&
-        <span className={style.year}>{year}</span>}
       {(day === 1) &&
-        <span className={style.month}>{monthShort}</span>}
+        <span className={style.month}>
+          {monthShort}
+          {(day === 1 && currentYear !== year) &&
+            <span className={style.year}>{year}</span>
+          }
+        </span>
+      }
 
       {/* {isSelected &&
         <div className={style.selection} style={{backgroundColor: (typeof theme.selectionColor == 'function') ? theme.selectionColor(mmt) : theme.selectionColor, color: theme.textColor.active}}>
