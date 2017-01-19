@@ -54,7 +54,8 @@ export default class InfiniteCalendar extends Component {
 		tabIndex: 1,
 		locale: {},
 		theme: {},
-		hideYearsOnSelect: true
+		hideYearsOnSelect: true,
+    longWeekdays: false,
 	};
 	static propTypes = {
 		selectedDate: validDate,
@@ -91,7 +92,8 @@ export default class InfiniteCalendar extends Component {
 		shouldHeaderAnimate: PropTypes.bool,
 		showOverlay: PropTypes.bool,
 		showTodayHelper: PropTypes.bool,
-		showHeader: PropTypes.bool
+		showHeader: PropTypes.bool,
+    longWeekdays: PropTypes.bool,
 	};
 	componentDidMount() {
 		let {autoFocus, keyboardSupport} = this.props;
@@ -372,6 +374,7 @@ export default class InfiniteCalendar extends Component {
 			maxDate,
 			showTodayHelper,
 			showHeader,
+      longWeekdays,
 			tabIndex,
 			width,
 			...other
@@ -407,7 +410,7 @@ export default class InfiniteCalendar extends Component {
 						display={display} />
 				}
 				<div className={style.container.wrapper}>
-					<Weekdays theme={theme} />
+					<Weekdays theme={theme} longWeekdays={longWeekdays} />
 					<div className={style.container.listWrapper}>
 						{showTodayHelper &&
 							<Today scrollToDate={this.scrollToDate} show={showToday} today={today} theme={theme} locale={locale} />

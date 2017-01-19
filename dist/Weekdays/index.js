@@ -54,7 +54,9 @@ var Weekdays = function (_Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			var theme = this.props.theme;
+			var _props = this.props,
+			    theme = _props.theme,
+			    longWeekdays = _props.longWeekdays;
 
 
 			return _react2.default.createElement(
@@ -64,7 +66,7 @@ var Weekdays = function (_Component) {
 					return _react2.default.createElement(
 						'li',
 						{ key: 'Weekday-' + index, className: style.day },
-						(0, _moment2.default)().weekday(index).format('ddd')
+						longWeekdays ? (0, _moment2.default)().weekday(index).format('dddd') : (0, _moment2.default)().weekday(index).format('ddd')
 					);
 				})
 			);
@@ -76,6 +78,7 @@ var Weekdays = function (_Component) {
 
 Weekdays.propTypes = {
 	locale: _react.PropTypes.object,
-	theme: _react.PropTypes.object
+	theme: _react.PropTypes.object,
+	longWeekdays: _react.PropTypes.bool
 };
 exports.default = Weekdays;
