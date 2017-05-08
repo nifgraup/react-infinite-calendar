@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -95,9 +99,9 @@ var Today = function (_Component) {
 }(_react.Component);
 
 Today.propTypes = {
-	locale: _react.PropTypes.object,
-	scrollToDate: _react.PropTypes.func,
-	show: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.bool]),
-	theme: _react.PropTypes.object
+	locale: _propTypes2.default.object,
+	scrollToDate: _propTypes2.default.func,
+	show: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.bool]),
+	theme: _propTypes2.default.object
 };
 exports.default = Today;

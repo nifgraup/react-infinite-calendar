@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -202,27 +206,27 @@ var List = function (_Component) {
 }(_react.Component);
 
 List.propTypes = {
-	width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
-	height: _react.PropTypes.number,
-	rowHeight: _react.PropTypes.number,
-	selectedDate: _react.PropTypes.object,
-	disabledDates: _react.PropTypes.arrayOf(_react.PropTypes.string),
-	disabledDays: _react.PropTypes.arrayOf(_react.PropTypes.number),
-	months: _react.PropTypes.arrayOf(_react.PropTypes.object),
-	onDaySelect: _react.PropTypes.func,
-	onScroll: _react.PropTypes.func,
-	renderMonthDay: _react.PropTypes.func,
-	onDayMouseDown: _react.PropTypes.func,
-	onDayMouseUp: _react.PropTypes.func,
-	onDayMouseEnter: _react.PropTypes.func,
-	overscanMonthCount: _react.PropTypes.number,
-	isScrolling: _react.PropTypes.bool,
+	width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+	height: _propTypes2.default.number,
+	rowHeight: _propTypes2.default.number,
+	selectedDate: _propTypes2.default.object,
+	disabledDates: _propTypes2.default.arrayOf(_propTypes2.default.string),
+	disabledDays: _propTypes2.default.arrayOf(_propTypes2.default.number),
+	months: _propTypes2.default.arrayOf(_propTypes2.default.object),
+	onDaySelect: _propTypes2.default.func,
+	onScroll: _propTypes2.default.func,
+	renderMonthDay: _propTypes2.default.func,
+	onDayMouseDown: _propTypes2.default.func,
+	onDayMouseUp: _propTypes2.default.func,
+	onDayMouseEnter: _propTypes2.default.func,
+	overscanMonthCount: _propTypes2.default.number,
+	isScrolling: _propTypes2.default.bool,
 	today: _utils.validParsedDate,
 	min: _utils.validParsedDate,
 	minDate: _utils.validParsedDate,
 	maxDate: _utils.validParsedDate,
-	showOverlay: _react.PropTypes.bool,
-	theme: _react.PropTypes.object,
-	locale: _react.PropTypes.object
+	showOverlay: _propTypes2.default.bool,
+	theme: _propTypes2.default.object,
+	locale: _propTypes2.default.object
 };
 exports.default = List;

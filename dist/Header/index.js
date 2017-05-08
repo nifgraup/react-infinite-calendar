@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -14,9 +18,9 @@ var _reactAddonsShallowCompare = require('react-addons-shallow-compare');
 
 var _reactAddonsShallowCompare2 = _interopRequireDefault(_reactAddonsShallowCompare);
 
-var _reactAddonsCssTransitionGroup = require('react-addons-css-transition-group');
+var _CSSTransitionGroup = require('react-transition-group/CSSTransitionGroup');
 
-var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
 var _classnames = require('classnames');
 
@@ -123,7 +127,7 @@ var Header = function (_Component) {
 							'div',
 							{ key: item, className: (0, _classnames2.default)(style.dateWrapper, style[item], _defineProperty({}, style.active, active)), title: title },
 							_react2.default.createElement(
-								_reactAddonsCssTransitionGroup2.default,
+								_CSSTransitionGroup2.default,
 								{ transitionName: animation, transitionEnterTimeout: 250, transitionLeaveTimeout: 250, transitionEnter: shouldHeaderAnimate, transitionLeave: shouldHeaderAnimate },
 								_react2.default.createElement(
 									'span',
@@ -146,12 +150,12 @@ var Header = function (_Component) {
 }(_react.Component);
 
 Header.propTypes = {
-	layout: _react.PropTypes.string,
-	locale: _react.PropTypes.object,
-	onClick: _react.PropTypes.func,
-	selectedDate: _react.PropTypes.oneOfType([_react.PropTypes.object, _react.PropTypes.bool]),
-	shouldHeaderAnimate: _react.PropTypes.bool,
-	theme: _react.PropTypes.object,
-	display: _react.PropTypes.string
+	layout: _propTypes2.default.string,
+	locale: _propTypes2.default.object,
+	onClick: _propTypes2.default.func,
+	selectedDate: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.bool]),
+	shouldHeaderAnimate: _propTypes2.default.bool,
+	theme: _propTypes2.default.object,
+	display: _propTypes2.default.string
 };
 exports.default = Header;

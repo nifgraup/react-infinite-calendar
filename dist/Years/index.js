@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -217,16 +221,16 @@ var Years = function (_Component) {
 }(_react.Component);
 
 Years.propTypes = {
-    height: _react.PropTypes.number,
-    width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
-    hideYearsOnSelect: _react.PropTypes.bool,
-    maxDate: _react.PropTypes.object,
-    minDate: _react.PropTypes.object,
-    onDaySelect: _react.PropTypes.func,
-    scrollToDate: _react.PropTypes.func,
-    selectedDate: _react.PropTypes.object,
-    setDisplay: _react.PropTypes.func,
-    theme: _react.PropTypes.object,
-    years: _react.PropTypes.array
+    height: _propTypes2.default.number,
+    width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+    hideYearsOnSelect: _propTypes2.default.bool,
+    maxDate: _propTypes2.default.object,
+    minDate: _propTypes2.default.object,
+    onDaySelect: _propTypes2.default.func,
+    scrollToDate: _propTypes2.default.func,
+    selectedDate: _propTypes2.default.object,
+    setDisplay: _propTypes2.default.func,
+    theme: _propTypes2.default.object,
+    years: _propTypes2.default.array
 };
 exports.default = Years;

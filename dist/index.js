@@ -8,6 +8,10 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -595,36 +599,36 @@ InfiniteCalendar.propTypes = {
 	max: _utils.validDate,
 	minDate: _utils.validDate,
 	maxDate: _utils.validDate,
-	locale: _react.PropTypes.object,
-	theme: _react.PropTypes.object,
-	width: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.string]),
-	height: _react.PropTypes.number,
-	rowHeight: _react.PropTypes.number,
-	className: _react.PropTypes.string,
-	overscanMonthCount: _react.PropTypes.number,
-	todayHelperRowOffset: _react.PropTypes.number,
-	disabledDays: _react.PropTypes.arrayOf(_react.PropTypes.number),
-	disabledDates: _react.PropTypes.arrayOf(_utils.validDate),
-	beforeSelect: _react.PropTypes.func,
-	onSelect: _react.PropTypes.func,
-	onDayMouseDown: _react.PropTypes.func,
-	onDayMouseUp: _react.PropTypes.func,
-	onDayMouseEnter: _react.PropTypes.func,
-	afterSelect: _react.PropTypes.func,
-	onScroll: _react.PropTypes.func,
-	onScrollEnd: _react.PropTypes.func,
-	keyboardSupport: _react.PropTypes.bool,
-	autoFocus: _react.PropTypes.bool,
-	onKeyDown: _react.PropTypes.func,
-	renderMonthDay: _react.PropTypes.func,
-	tabIndex: _react.PropTypes.number,
-	layout: _react.PropTypes.oneOf(['portrait', 'landscape']),
-	display: _react.PropTypes.oneOf(['years', 'days']),
-	hideYearsOnSelect: _react.PropTypes.bool,
-	shouldHeaderAnimate: _react.PropTypes.bool,
-	showOverlay: _react.PropTypes.bool,
-	showTodayHelper: _react.PropTypes.bool,
-	showHeader: _react.PropTypes.bool,
-	longWeekdays: _react.PropTypes.bool
+	locale: _propTypes2.default.object,
+	theme: _propTypes2.default.object,
+	width: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string]),
+	height: _propTypes2.default.number,
+	rowHeight: _propTypes2.default.number,
+	className: _propTypes2.default.string,
+	overscanMonthCount: _propTypes2.default.number,
+	todayHelperRowOffset: _propTypes2.default.number,
+	disabledDays: _propTypes2.default.arrayOf(_propTypes2.default.number),
+	disabledDates: _propTypes2.default.arrayOf(_utils.validDate),
+	beforeSelect: _propTypes2.default.func,
+	onSelect: _propTypes2.default.func,
+	onDayMouseDown: _propTypes2.default.func,
+	onDayMouseUp: _propTypes2.default.func,
+	onDayMouseEnter: _propTypes2.default.func,
+	afterSelect: _propTypes2.default.func,
+	onScroll: _propTypes2.default.func,
+	onScrollEnd: _propTypes2.default.func,
+	keyboardSupport: _propTypes2.default.bool,
+	autoFocus: _propTypes2.default.bool,
+	onKeyDown: _propTypes2.default.func,
+	renderMonthDay: _propTypes2.default.func,
+	tabIndex: _propTypes2.default.number,
+	layout: _propTypes2.default.oneOf(['portrait', 'landscape']),
+	display: _propTypes2.default.oneOf(['years', 'days']),
+	hideYearsOnSelect: _propTypes2.default.bool,
+	shouldHeaderAnimate: _propTypes2.default.bool,
+	showOverlay: _propTypes2.default.bool,
+	showTodayHelper: _propTypes2.default.bool,
+	showHeader: _propTypes2.default.bool,
+	longWeekdays: _propTypes2.default.bool
 };
 exports.default = InfiniteCalendar;
