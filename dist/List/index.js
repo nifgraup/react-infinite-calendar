@@ -14,7 +14,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactVirtualized = require('react-virtualized');
+var _List = require('react-virtualized/dist/commonjs/List');
 
 var _classnames = require('classnames');
 
@@ -185,7 +185,7 @@ var List = function (_Component) {
 				width = window.innerWidth * parseInt(width.replace('%', ''), 10) / 100; // See https://github.com/bvaughn/react-virtualized/issues/229
 			}
 
-			return _react2.default.createElement(_reactVirtualized.List, {
+			return _react2.default.createElement(_List.List, {
 				ref: 'VirtualScroll',
 				width: width,
 				height: height,

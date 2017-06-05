@@ -14,7 +14,7 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactVirtualized = require('react-virtualized');
+var _List = require('react-virtualized/dist/commonjs/List');
 
 var _classnames = require('classnames');
 
@@ -171,7 +171,7 @@ var Years = function (_Component) {
                     className: style.root,
                     style: { color: theme.selectionColor, height: height + 50 }
                 },
-                _react2.default.createElement(_reactVirtualized.List, {
+                _react2.default.createElement(_List.List, {
                     ref: 'VirtualScroll',
                     className: style.list,
                     width: width,

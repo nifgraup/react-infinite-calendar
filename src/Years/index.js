@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {List as VirtualScroll} from 'react-virtualized';
+import {List as VirtualScroll} from 'react-virtualized/dist/commonjs/List';
 import classNames from 'classnames';
 import {keyCodes} from '../utils';
 import moment from 'moment';

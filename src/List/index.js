@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {List as VirtualScroll} from 'react-virtualized';
+import {List as VirtualScroll} from 'react-virtualized/dist/commonjs/List';
 import classNames from 'classnames';
 // import moment from 'moment';
 import {getMonth, getWeeksInMonth, validParsedDate} from '../utils';
